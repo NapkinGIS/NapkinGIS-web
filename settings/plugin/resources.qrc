@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/plugins/napkingis" >
+        <file>img/icon.png</file>
+        <file>img/settings.svg</file>
+    </qresource>
+</RCC>

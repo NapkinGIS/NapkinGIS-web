@@ -1,0 +1,29 @@
+import Vue from 'vue'
+import 'material-icons/iconfont/material-icons.scss'
+import Vuetify from 'vuetify/lib'
+
+import VIcon from '@/components/VIcon.vue'
+
+Vue.use(Vuetify)
+
+function customIcon (name) {
+  return {
+    component: VIcon,
+    props: { name }
+  }
+}
+const customIcons = ['db', 'qgis', 'desktop']
+
+export default new Vuetify({
+  theme: {
+    themes: {
+      light: {
+        // primary: '#00b8e5'
+        primary: '#3c63ac'
+      }
+    }
+  },
+  icons: {
+    values: Object.assign({}, ...customIcons.map(name => ({ [name]: customIcon(name) })))
+  }
+})

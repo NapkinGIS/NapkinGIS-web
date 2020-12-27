@@ -1,0 +1,20 @@
+build/
+dist/
+node_modules/
+static/
+/dev/
+MANIFEST
+
+*.pyc
+gisquick.h
+gisquick.so
+gisquick.dll
+
+# vim files
+.*.sw*
+.*.un~*
+
+.vagrant
+
+docker/docker-compose.yml
+docker/_data
