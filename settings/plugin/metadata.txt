@@ -8,7 +8,7 @@ author=NapkinGIS
 email=contact@napkingis.no
 about=Plugin for publishing your QGIS projects to the NapkinGIS publishing platform. <a href="https://www.napkingis.com">https://www.napkingis.com</a>
 
-homepage=https://www.napkingis.com/
+homepage=https://www.napkingis.com
 icon=img/icon.png
 experimental=False
 deprecated=False
