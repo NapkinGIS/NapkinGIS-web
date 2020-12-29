@@ -1,10 +1,10 @@
-## Build image of server
+## Build image
 ```
-docker build -t gisquick/settings .
+docker build -t napkingis/settings .
 ```
 Image for development:
 ```
-docker build -f Dockerfile.dev -t gisquick/settings-dev .
+docker build -f Dockerfile.dev -t napkingis/settings-dev .
 ```
 
 ## Development

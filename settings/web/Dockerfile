@@ -7,7 +7,7 @@ COPY . .
 RUN npm run build
 
 
-FROM gisquick/webapp-container
+FROM napkingis/webapp-container
 
 COPY --from=webapp /webapp/dist/ /var/www
 CMD /bin/true

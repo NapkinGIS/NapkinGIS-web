@@ -1,0 +1,17 @@
+.transparent {
+  background-color: transparent;
+}
+.primary {
+  background-color: #3C63AC;
+  color: rgba(255, 255, 255, .87);
+}
+.primary--text {
+  color: #3C63AC!important;
+}
+.error {
+  background-color: #D32F2F!important;
+  color: rgba(255, 255, 255, .87);
+}
+.error--text {
+  color: #D32F2F;
+}

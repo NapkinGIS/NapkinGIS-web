@@ -23,6 +23,24 @@
             <v-btn color="secondary" @click="showLogin=true">Sign in</v-btn>
           </v-layout>
         </div>
+        <div class="sign-info">
+          <v-layout class="column section mx-2 my-4">
+            <p class="text--secondary">
+              Continue with Sign In to view your projects
+            </p>
+            <v-btn color="secondary" @click="showLogin=true">Sign in</v-btn>
+          </v-layout>
+          <div class="divider"/>
+          <v-layout class="column section mx-2 my-4">
+            <p class="text--secondary">
+              Do you wish to sign up for NapkinGIS? Please contact us at <a href="mailto:contact@napkingis.no">contact@napkingis.no</a> for more information.
+            </p>
+            <!--p class="text--secondary">
+              Create a new account to publish your own maps
+            </p>
+            <v-btn color="primary" href="/accounts/signup/">Sign up</v-btn-->
+          </v-layout>
+        </div>
       </div>
     </template>
     <login-dialog

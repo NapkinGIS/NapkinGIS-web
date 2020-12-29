@@ -6,5 +6,5 @@ Base image for static web applications served by file server.
 
 ## Build image
 ```
-docker build -t gisquick/webapp-container .
+docker build -t napkingis/webapp-container .
 ```

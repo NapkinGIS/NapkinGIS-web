@@ -1,6 +1,6 @@
 ## Build image
 ```
-docker build -t gisquick/web-map .
+docker build -t napkingis/web-map .
 ```
 
 ## Project setup

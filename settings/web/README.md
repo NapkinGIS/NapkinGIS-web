@@ -1,8 +1,6 @@
-# web
-
-## Docker build
+## Build image
 ```
-docker build -t gisquick/web-user .
+docker build -t napkingis/web-user .
 ```
 
 ## Project setup

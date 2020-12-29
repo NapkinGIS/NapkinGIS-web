@@ -1,4 +1,4 @@
 ## Build image
 ```
-docker build -t gisquick/qgis-server:3.4 .
+docker build -t napkingis/qgis-server:3.4 .
 ```

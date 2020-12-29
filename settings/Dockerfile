@@ -11,7 +11,7 @@ RUN go build -ldflags="-s -w" -o /go/bin/server cmd/server/main.go
 
 FROM alpine:latest
 
-WORKDIR /var/www/gisquick-settings
+WORKDIR /var/www/napkingis-settings
 COPY --from=go-builder /go/bin/server ./server
 
 EXPOSE 8001

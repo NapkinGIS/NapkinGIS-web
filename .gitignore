@@ -1,14 +1,11 @@
 build/
 dist/
-node_modules/
-static/
-/dev/
 MANIFEST
+webclient/node_modules
+django/server/webgis/viewer/static/
+/dev/
 
 *.pyc
-gisquick.h
-gisquick.so
-gisquick.dll
 
 # vim files
 .*.sw*
@@ -16,5 +13,5 @@ gisquick.dll
 
 .vagrant
 
-docker/docker-compose.yml
-docker/_data
+*/docker-compose.yml
+*/_data
