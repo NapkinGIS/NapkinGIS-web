@@ -4,9 +4,9 @@
       v-if="error"
       class="error--text"
     >
-      There was a problem with activation of your account!
+      There was a problem with activation of your account
     </h1>
-    <h1 v-else>Your account was activated!</h1>
+    <h1 v-else>Your account was activated</h1>
 
     <v-btn class="raised primary" href="/">Continue to homepage</v-btn>
   </base-page>

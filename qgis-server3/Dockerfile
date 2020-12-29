@@ -4,7 +4,7 @@ ARG repo=ubuntu-ltr
 
 # Download public keys for qgis repository
 RUN apt-get update && apt-get install -y --no-install-recommends gnupg
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key F7E06F06199EF2F2
 
 # Add qgis and ubuntugis repositories
 RUN sh -c "echo deb http://qgis.org/$repo bionic main >> /etc/apt/sources.list" && \

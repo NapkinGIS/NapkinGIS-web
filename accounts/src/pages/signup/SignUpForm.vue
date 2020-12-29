@@ -63,7 +63,8 @@
       @input="validators.password2.validate"
     />
     <v-button
-      class="raised primary"
+      raised primary
+      dark
       :disabled="processing || !formValid"
       @click="createAccount"
     >

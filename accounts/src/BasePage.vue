@@ -2,7 +2,7 @@
   <div class="app">
     <div class="spacer"/>
     <div class="content">
-      <text-logo class="text-logo" viewBox="0 0 750 100" height="50" width="300"/>
+      <img class="my-1 logo" src="@/assets/text_logo_dark.svg">
       <slot/>
     </div>
     <div class="spacer"/>
@@ -11,12 +11,12 @@
 </template>
 
 <script>
-//import Logo from '@/assets/image_logo.svg?inline'
+import Logo from '@/assets/image_logo.svg?inline'
 import TextLogo from '@/assets/text_logo_dark.svg?inline'
 
 export default {
   components: {
-    //Logo,
+    Logo,
     TextLogo
   }
 }
@@ -31,6 +31,10 @@ body {
   background-color: #eee;
   min-width: 100%;
   overflow: auto;
+}
+
+.logo {
+  height: 50px;
 }
 
 .app {
@@ -48,6 +52,7 @@ body {
     max-width: 440px;
     position: relative;
     box-sizing: border-box;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     min-width: 440px;
     color: #333;
 

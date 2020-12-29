@@ -33,6 +33,7 @@
     />
     <v-button
       raised primary
+      dark
       :disabled="processing || !formValid"
       @click="setPassword"
     >
