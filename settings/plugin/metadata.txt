@@ -1,12 +1,12 @@
 [general]
-name=NapkinGIS
+name=NapkinGIS – Deploy
 qgisMinimumVersion=3.0
-description=Publish your QGIS projects to NapkinGIS
+description=Deploy your QGIS projects to NapkinGIS
 category=Web
-version=2.1.3
+version=1.0
 author=NapkinGIS
 email=contact@napkingis.no
-about=Plugin for publishing your QGIS projects to the NapkinGIS publishing platform. <a href="https://www.napkingis.com">https://www.napkingis.com</a>
+about=Plugin for deploying your QGIS projects to the NapkinGIS publishing platform. <a href="https://www.napkingis.com">https://www.napkingis.com</a>
 
 homepage=https://www.napkingis.com
 icon=img/icon.png

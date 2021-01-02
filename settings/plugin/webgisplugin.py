@@ -126,14 +126,14 @@ class WebGisPlugin(object):
     def initGui(self):
         # Create action that will start plugin configuration
         self.action = QAction(
-            QIcon(":/plugins/gisquick2/img/icon.svg"),
-            u"Publish in Gisquick", self.iface.mainWindow())
+            QIcon(":/plugins/napkingis2/img/icon.png"),
+            u"NapkinGIS – Deploy tool", self.iface.mainWindow())
         self.action.setCheckable(True)
         # connect the action to the run method
         self.action.triggered.connect(self.toggle_tool)
 
         self.settings_action = QAction(
-            QIcon(":/plugins/gisquick2/img/settings.svg"),
+            QIcon(":/plugins/napkingis2/img/settings.svg"),
             u"Configure", self.iface.mainWindow())
         # connect the action to the run method
         self.settings_action.triggered.connect(self.show_settings)
@@ -141,8 +141,8 @@ class WebGisPlugin(object):
         # Add toolbar button and menu item
         # self.iface.addToolBarIcon(self.action)
         self.iface.addWebToolBarIcon(self.action)
-        self.iface.addPluginToWebMenu(u"&Gisquick2", self.action)
-        self.iface.addPluginToWebMenu(u"&Gisquick2", self.settings_action)
+        self.iface.addPluginToWebMenu(u"&NapkinGIS", self.action)
+        self.iface.addPluginToWebMenu(u"&NapkinGIS", self.settings_action)
 
     def unload(self):
         if self.ws:
@@ -150,8 +150,8 @@ class WebGisPlugin(object):
             self.ws = None
 
         # Remove the plugin menu item and icon
-        self.iface.removePluginWebMenu(u"&Gisquick2", self.action)
-        self.iface.removePluginWebMenu(u"&Gisquick2", self.settings_action)
+        self.iface.removePluginWebMenu(u"&NapkinGIS", self.action)
+        self.iface.removePluginWebMenu(u"&NapkinGIS", self.settings_action)
         self.iface.removeWebToolBarIcon(self.action)
 
     def is_overlay_layer_for_publish(self, layer):
@@ -525,7 +525,7 @@ class WebGisPlugin(object):
         return data
 
     def get_settings(self):
-        return QSettings(QSettings.IniFormat, QSettings.UserScope, "Gisquick", "gisquick2")
+        return QSettings(QSettings.IniFormat, QSettings.UserScope, "NapkinGIS – Deploy", "napkingis2")
 
     def show_settings(self):
         settings = self.get_settings()
@@ -594,7 +594,7 @@ class WebGisPlugin(object):
                 password = settings.value("password")
 
             plugin_ver = __metadata__["general"].get("version")
-            client_info = "GisquickPlugin/%s (%s %s; QGIS %s)" % (plugin_ver, platform.system(), platform.machine(), Qgis.QGIS_VERSION)
+            client_info = "NapkinGISPlugin/%s (%s %s; QGIS %s)" % (plugin_ver, platform.system(), platform.machine(), Qgis.QGIS_VERSION)
 
             class WebsocketServer(QThread):
                 finished = QtCore.pyqtSignal(int)
