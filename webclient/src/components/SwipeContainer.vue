@@ -1,12 +1,24 @@
 <template>
-  <v-layout
-    class="swipe-content"
-    @transitionend.self="transitionend"
-  >
-    <!-- <div> -->
-    <slot/>
-    <!-- </div> -->
-  </v-layout>
+  <div class="main-container">
+    <v-btn
+      dark
+      color="grey darken-2"
+      class="panel-toggle"
+      :class="{expanded: visible}"
+      @click="toggle"
+    >
+      <icon name="arrow-right"/>
+    </v-btn>
+
+    <v-layout
+      class="swipe-content"
+      @transitionend.self="transitionend"
+    >
+      <!-- <div> -->
+      <slot/>
+      <!-- </div> -->
+    </v-layout>
+  </div>
 </template>
 
 <script>
@@ -102,13 +114,48 @@ export default {
         }
         el.style.transition = ''
       }
+    },
+    toggle (newVal, oldVal) {
+      const el = this.$el
+
+      if(this.visible) {
+        el.style.transition = 'transform 0.5s cubic-bezier(.25,.8,.5,1)'
+        el.style.transform = `translate3d(-100%, 0, 0)`
+        this.visible = false
+      }else{
+        this.visible = true
+        el.style.transition = 'transform 0.3s cubic-bezier(.25,.8,.5,1)'
+        el.style.transform = 'translate3d(0, 0, 0)'
+      }
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.swipe-content {
-  transition-timing-function: cubic-bezier(.25,.8,.5,1);
+.main-container {
+  width: 288px;
+  height: 100vh;
+  max-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr minmax(0, max-content) minmax(0, min-content) minmax(0, min-content);
+
+  .swipe-content {
+    transition-timing-function: cubic-bezier(.25,.8,.5,1);
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    width: 288px;
+    z-index: 2;
+  }
+
+  .panel-toggle {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    min-width: 40px;
+    z-index: 1;
+  }
 }
 </style>
