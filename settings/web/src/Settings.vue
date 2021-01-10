@@ -8,7 +8,7 @@
 
     <portal-target name="menu" class="menu">
       <themeable-toolbar dark>
-        <v-btn rounded text :to="{name: 'projects'}">
+        <v-btn rounded text :to="{name: 'projects'}" class="projects">
           <v-icon class="mr-1">view_list</v-icon>
           Projects
         </v-btn>
@@ -92,6 +92,12 @@ export default {
     img {
       height: inherit;
       padding: 10px 0;
+    }
+  }
+  .projects {
+    /**/
+    @media (max-width: 1450px) {
+      margin-left: 35px;
     }
   }
   .menu {

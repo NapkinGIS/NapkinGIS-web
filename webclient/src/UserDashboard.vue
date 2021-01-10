@@ -13,7 +13,7 @@
               v-text="user.full_name"
             />
           </v-layout>
-          <v-btn href="/user/" class="mr-1" icon small>
+          <v-btn href="/user/" class="mr-1 accountBtn" icon small>
             <v-icon color="secondary" size="22">account_circle</v-icon>
           </v-btn>
 
@@ -85,6 +85,7 @@ export default {
     ...mapState(['app', 'user'])
   },
   mounted () {
+    //document.querySelector('.accountBtn').click() // auto-redirect to /user page
     this.fetchProjects()
   },
   methods: {
