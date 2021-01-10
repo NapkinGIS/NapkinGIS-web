@@ -531,7 +531,7 @@ class WebGisPlugin(object):
         settings = self.get_settings()
         dialog_filename = os.path.join(self.plugin_dir, "ui", "settings.ui")
         dialog = PyQt5.uic.loadUi(dialog_filename)
-        dialog.server_url.setText(settings.value("server_url", ""))
+        dialog.server_url.setText(settings.value("server_url", "https://web.napkingis.no"))
         dialog.username.setText(settings.value("username", ""))
         dialog.password.setText(settings.value("password", ""))
 
